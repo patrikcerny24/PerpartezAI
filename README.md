@@ -1,1 +1,1 @@
-# AITutor
+# PerpartezAI
