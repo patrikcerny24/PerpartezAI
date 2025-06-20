@@ -1,8 +1,9 @@
-package com.example.demo.repository;
+package com.example.demo;
 
-import com.example.demo.entity.Users;
+import com.example.demo.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-@repository
-public interface RecipeRepository extends JpaRepository<Users, Long> {
+@Repository
+public interface UserRepository extends JpaRepository<User, Long> {
 }

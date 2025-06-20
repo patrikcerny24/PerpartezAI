@@ -1,32 +1,37 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+
 @RestController
 @RequestMapping("/user")
-public class BookController {
-  
+public class UserController {
     @Autowired
-    private UsersService usersService;
-    
+    private UserService userService;
+
     @GetMapping("")
-    public List<Users> getAllUsers() {
-        return usersService.getAllUsers();
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
     }
-    
+
     @GetMapping("/{id}")
-    public Users getUserById(@PathVariable Long id) {
-        return usersService.getUserById(id);
+    public User getUserById(@PathVariable Long id) {
+        return userService.getUserById(id);
     }
-    
+
     @PostMapping("")
-    public Users createUser(@RequestBody User user) {
-        return userService.createUser(User);
+    public User createUser(@RequestBody User user) {
+        return userService.createUser(user);
     }
-    
+
     @PutMapping("/{id}")
-    public Users updateUser(@PathVariable Long id, @RequestBody User user) {
-        return usersService.updateUser(id, user);
+    public User updateUser(@PathVariable Long id, @RequestBody User user) {
+        return userService.updateUser(id, user);
     }
-    
+
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable Long id) {
-        usersService.deleteUser(id);
+        userService.deleteUser(id);
     }
 }

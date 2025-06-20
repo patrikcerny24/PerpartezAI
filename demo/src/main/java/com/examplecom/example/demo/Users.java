@@ -6,85 +6,29 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name = "Users")
-
-public class Recipe {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String Name;
-    private String Surname;
-    private String Username;
-    private String Password;
-    private String Email;
-    private String YearOfBirth;
+    private String name;
+    private String surname;
+    private String username;
+    private String password;
+    private String email;
+    private int yearOfBirth;
 
-    public user(){
-        //deafult constructor
+    public User() {
+        // default constructor
     }
 
-    public user(String Name, String Surname, String Username, String Password, String Email, Int YearOfBirth){
-        this.Name = Name;
-        this.Surname = Surname;
-        this.Username = Username;
-        this.Password = Password;
-        this.Email = Email;
-        this.YearOfBirth = YearOfBirth;
+    public User(String name, String surname, String username, String password, String email, int yearOfBirth) {
+        this.name = name;
+        this.surname = surname;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.yearOfBirth = yearOfBirth;
     }
-    
-    //getters
-
-    public Long getId(){
-        return.id;
-    }
-
-    public String getName(){
-        return.Name;
-    }
-
-    public String getSurname(){
-        return.Surname;
-    }
-
-    public String getUsername(){
-        return.Username;
-    }
-
-    public String getPassword(){
-        return.Password;
-    }
-
-    public String getEmail(){
-        return.Email;
-    }
-
-    public Int getYearOfBirth(){
-        return.YearOfBirth;
-    }
-    
-    //setters
-
-    public void setName(){
-        this.Name = Name;
-    }
-
-    public void setSurname(){
-        this.Surname = Surname;
-    }
-
-    public void setUsername(){
-        this.Username = Username;
-    }
-
-    public void setEmail(){
-        this.Email = Email;
-    }
-
-    public void setPassword(){
-        this.Password = Password;
-    }
-
-    public void setYearOfBirth(){
-        this.YearOfBirth = YearOfBirth;
-    }
+    // Lombok @Data generates getters and setters
 }
