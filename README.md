@@ -1,1 +1,2 @@
 # PerpartezAI
+Jakub vytvoří Readme
