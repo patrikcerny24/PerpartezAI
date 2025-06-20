@@ -1,28 +1,32 @@
-package com.example.demo.controller;
-
-import com.example.demo.entity.Recipe;
-import com.example.demo.repository.RecipeRepository;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
 @RestController
-@RequestMapping("/api/recipes")
-public class RecipeController {
-
-    private final RecipeRepository repository;
-
-    public RecipeController(RecipeRepository repository) {
-        this.repository = repository;
+@RequestMapping("/user")
+public class BookController {
+  
+    @Autowired
+    private UsersService usersService;
+    
+    @GetMapping("")
+    public List<Users> getAllUsers() {
+        return usersService.getAllUsers();
     }
-
-    @GetMapping
-    public List<Recipe> getAll() {
-        return repository.findAll();
+    
+    @GetMapping("/{id}")
+    public Users getUserById(@PathVariable Long id) {
+        return usersService.getUserById(id);
     }
-
-    @PostMapping
-    public Recipe create(@RequestBody Recipe recipe) {
-        return repository.save(recipe);
+    
+    @PostMapping("")
+    public Users createUser(@RequestBody User user) {
+        return userService.createUser(User);
+    }
+    
+    @PutMapping("/{id}")
+    public Users updateUser(@PathVariable Long id, @RequestBody User user) {
+        return usersService.updateUser(id, user);
+    }
+    
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Long id) {
+        usersService.deleteUser(id);
     }
 }
