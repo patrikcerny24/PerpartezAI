@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Menu.css';
 
+
 const Menu = () => {
   const [open, setOpen] = useState(false);
 
@@ -26,6 +27,7 @@ const Menu = () => {
   </ul>
       </div>
     </nav>
+    
   );
 };
 
