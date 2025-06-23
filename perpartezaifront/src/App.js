@@ -6,11 +6,9 @@ import Menu from "./components/Menu";
 
 const App = () => {
   return (
-    <header>
-      <div className="container-fluid bg-red">
+    <header className="bg-white  ">
+        <Menu className="menu"/>
         <Logo/> 
-        <Menu />
-      </div>
     </header>
   );
 }
