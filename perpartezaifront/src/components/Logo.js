@@ -7,8 +7,8 @@ const Logo = () => {
         <img src={LogoSrc} 
         alt="Perpartez Logo černé"
         className="rounded  float-left img-fluid"
-        width = "100"
-        height = "100"
+        width = "70"
+        height = "70"
         />
     )
 }

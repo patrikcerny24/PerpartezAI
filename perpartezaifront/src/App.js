@@ -1,15 +1,22 @@
 import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Logo from "./components/Logo";
-import Menu from "./components/Menu";
+import {Outlet} from 'react-router-dom';
+import Menu from './components/Menu.js';
+
 
 
 const App = () => {
-  return (
-    <header className="bg-white  ">
-        <Menu className="menu"/>
-        <Logo/> 
+  return (<>
+    <header>
+      <Menu></Menu>
     </header>
+    <main>
+      <Outlet/>
+    </main>
+    <footer>
+
+    </footer>
+    </>
   );
 }
 

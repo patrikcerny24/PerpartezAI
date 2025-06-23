@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import Menu from '../components/Menu';
+import "bootstrap/dist/css/bootstrap.min.css";
 const Layout = () => {
   return (
     <>
       <header>
         <Menu />
-        <h1>Welcome to the Layout Page</h1>
       </header>
       <main>
         <Outlet />

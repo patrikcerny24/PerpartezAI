@@ -1,42 +1,56 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./Menu.css";
- import React, { useState } from 'react';
-import { List, X } from 'react-bootstrap-icons';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Logo from "./Logo.js";
+import './Menu.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
+import Home from '../pages/Home.js';
+import About from '../pages/Aboutus.js';
+import Register from '../pages/Register.js';
+import Login from '../pages/Login.js';
 
-const Menu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(prev => !prev);
-  };
-
+function Menu() {
   return (
-    <div className="container-fluid mt-3 mr-3 div-menu">
-  <button
-    className="btn btn-primary d-flex align-items-center justify-content-center"
-    type="button"
-    onClick={toggleMenu}
-    aria-expanded={isOpen}
-    aria-controls="menuCollapse"
-    aria-label={isOpen ? 'Close menu' : 'Open menu'}
-  >
-    {isOpen ? <X size={24} /> : <List size={24} />}
-  </button>
-
-  <div
-    className={`collapse ${isOpen ? 'show' : ''}`}
-    id="menuCollapse"
-  >
-    <div className="card card-body mt-3">
-      <ul className="list-unstyled mb-0">
-        <li><a href="#item1" className="d-block py-2">Item 1</a></li>
-        <li><a href="#item2" className="d-block py-2">Item 2</a></li>
-        <li><a href="#item3" className="d-block py-2">Item 3</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+  <Router>
+    <div>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="./pages/Home"><Logo/></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <LinkContainer to="/">
+            <Nav.Link href="./pages/Home">Domů</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/about">
+            <Nav.Link href="./pages/Aboutus">O nás</Nav.Link>
+            </LinkContainer>
+            <NavDropdown title="Přihlásit se" id="basic-nav-dropdown">
+              <LinkContainer to="/register">
+              <NavDropdown.Item href="./pages/Register.js">Registrovat se</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to="/login">
+              <NavDropdown.Item href="./pages/Login.js">
+                Přihlásit se
+              </NavDropdown.Item>
+              </LinkContainer>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
+   </div>
+  </Router>
   );
-};
+}
 
 export default Menu;
