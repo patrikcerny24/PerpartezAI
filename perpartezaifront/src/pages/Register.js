@@ -53,7 +53,6 @@ const Register = () => {
                             id="name"
                             value={formData.name}
                             onChange={handleChange}
-                            placeholder="Zadejte své jméno"
                             required
                         />
                     </div>
@@ -65,7 +64,6 @@ const Register = () => {
                             id="surename"
                             value={formData.surname}
                             onChange={handleChange}
-                            placeholder="Zadejte své příjmení"
                             required
                         />
                     </div>
@@ -77,7 +75,6 @@ const Register = () => {
                             id="username"
                             value={formData.username}
                             onChange={handleChange}
-                            placeholder="Zadejte své uživatelské jméno"
                             required
                         />
                     </div>
@@ -89,7 +86,6 @@ const Register = () => {
                             id="email"
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="Zadejte svůj email"
                             required
                         />
                     </div>
@@ -105,14 +101,13 @@ const Register = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Heslo:</label>
+                        <label htmlFor="password">Nové Heslo:</label>
                         <input
                             type="password"
                             className="form-control"
                             id="password"
                             value={formData.password}
                             onChange={handleChange}
-                            placeholder="Zadejte své heslo"
                             required
                         />
                     </div>
@@ -122,7 +117,6 @@ const Register = () => {
                             type="password"
                             className="form-control"
                             id="confirmPassword"
-                            placeholder="Potvrdit heslo"
                             required
                         />
                     </div>
