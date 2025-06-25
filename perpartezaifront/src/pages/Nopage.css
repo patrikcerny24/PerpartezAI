@@ -4,11 +4,11 @@ button{
     background-color: #333333;
     justify-items: center;
 }
-a {
-    color: #ffff;
+.link-nopage {
+    color: #fff;
     text-decoration: none;
 }
-a:hover{
+.link-nopage:hover{
     color: #605d5d;
     text-decoration: none;
 }
