@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Menu = () => {
   return (
     <div>
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-white">
       <Container>
         <Navbar.Brand href="/"><Logo/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
