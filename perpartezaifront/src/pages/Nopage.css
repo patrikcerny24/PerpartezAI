@@ -1,0 +1,14 @@
+button{
+    margin-top: 20px;
+    align-items: center;
+    background-color: #333333;
+    justify-items: center;
+}
+a {
+    color: #ffff;
+    text-decoration: none;
+}
+a:hover{
+    color: #605d5d;
+    text-decoration: none;
+}
