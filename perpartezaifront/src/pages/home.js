@@ -2,7 +2,7 @@ import React from 'react';
 const Home = () => {
     return (
         <>
-        <div className="container">     
+        <div className="container-fluid bg-light text-">     
         <p>Home</p>
         </div>
         <footer className="conatiner-fluid">
