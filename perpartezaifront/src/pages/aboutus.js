@@ -5,11 +5,9 @@ const Aboutus = () => {
   return (
     <>
     
-    <Container fluid>
-      <Row className="justify-content-center">
-        <Col py={2} className="text-center">
+    <Container fluid className="bg-light">
+      <Row className="text-center">
           <h1>Náš náhled do budoucnosti</h1> 
-        </Col>
       </Row>
       <Row className="justify-content-center">
         <Col  className="text-center">
