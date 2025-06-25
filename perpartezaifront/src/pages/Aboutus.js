@@ -9,22 +9,22 @@ const Aboutus = () => {
       <Row className="text-center">
           <h1>Náš náhled do budoucnosti</h1> 
       </Row>
-      <Row className="justify-content-center">
-        <Col  className="text-center">
+      <Row className="justify-content-center text-center">
           <p> Naším cílem je neustále rozšiřovat nabídku služeb. <br></br>
           PerpartezAI nebude pomáhat jen s matematikou – postupně nabídne podporu ve všech předmětech základní i střední školy. <br></br></p>
-        </Col>
       </Row> 
     </Container>
 
     
     <Container fluid>
-      <Row>
-        <Col mt={4}>
-          Kontakt:  <a href="mailto:liskajakub612@outlook.com">  liskajakub612@outlook.com  </a>  <br></br>
-          &copy; 2025 Perpartezai, Všechna práva vyhrazena.
-        </Col>
+    <Col>
+      <Row className="d-inline">
+          Kontakt:<a href="mailto:liskajakub612@outlook.com">liskajakub612@outlook.com</a>
       </Row>
+      <Row>
+        &copy; 2025 PerpartezAI, Všechna práva vyhrazena.
+      </Row>
+    </Col>
     </Container>
         </>
         
