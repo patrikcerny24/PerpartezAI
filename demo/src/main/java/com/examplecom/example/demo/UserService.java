@@ -39,4 +39,20 @@ public class UserService {
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
+
+    public boolean isEmailTaken(String email) {
+        return userRepository.findByEmail(email).isPresent();
+    }
+
+    public boolean isUsernameTaken(String username) {
+        return userRepository.findByUsername(username).isPresent();
+    }
+
+    public void registeredUser (User user){
+        if (isEmailTaken(user.getEmail()) || isUsernameTaken(user.getUsername())) {
+            throw new RuntimeException("Email or username is already taken");
+        }
+        userRepository.save(user);
+
+    }
 }
