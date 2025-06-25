@@ -1,7 +1,8 @@
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from"./pages/layout";
-import Home from "./pages/home";
-import About from "./pages/aboutus";
+import React from 'react';
+import { createRoot } from 'react-dom/client';  
+import "./index.css"  
+import App from './App';
 
-
+const container = document.getElementById('root'); 
+const root = createRoot(container);
+root.render(<App />);
