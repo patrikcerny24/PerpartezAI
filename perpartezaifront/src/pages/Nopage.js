@@ -5,7 +5,7 @@ const Nopage = () => {
   return (
     <div className="container justify-content-center text-center bg-warning "> 
     <h1>Error 404 stránku se nepodařilo najít !</h1>
-    <button><a href="/">Zpět na domovskou stránku</a></button>
+    <button><a href="/" className="link-nopage">Zpět na domovskou stránku</a></button>
     </div>
   );
 }
