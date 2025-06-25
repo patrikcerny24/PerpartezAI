@@ -13,7 +13,6 @@ const Login = () => {
                                 type="email"
                                 className="form-control"    
                                 id="email"
-                                placeholder="Zadejte svůj email"
                                 required
                             />
                         </div>
@@ -23,7 +22,6 @@ const Login = () => {
                                 type="password"
                                 className="form-control"
                                 id="password"
-                                placeholder="Zadejte své heslo"
                                 required
                             />
                         </div>
