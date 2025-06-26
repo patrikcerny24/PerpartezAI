@@ -8,6 +8,7 @@ import Aboutus from './pages/Aboutus.js';
 import Register from './pages/Register.js';
 import Login from './pages/Login.js';
 import Nopage from './pages/Nopage.js';
+import Pricing from "./pages/Pricing.js"
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
      <Route path="/register" element={<Register/>}></Route>
      <Route path="/login" element={<Login/>}></Route>
      <Route path="*" element={<Nopage/>}></Route>
+     <Route path="/pricing" element={<Pricing/>}></Route>
     </Routes>
     </>
   </BrowserRouter>

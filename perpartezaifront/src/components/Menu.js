@@ -11,14 +11,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Menu = () => {
   return (
     <div>
-    <Navbar expand="lg" className="bg-white">
+    <Navbar expand="lg" className="bg-white ">
       <Container>
         <Navbar.Brand href="/"><Logo/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <Nav.Link href="/home" className="menu">Domů</Nav.Link>
             <Nav.Link href="/aboutus" className="menu">O nás</Nav.Link>
+            <Nav.link href="/pricing" className="menu">Cena</Nav.link>
             <NavDropdown   title={
     <span style={{ color: '#038B6B', fontSize: '1.1rem' }}>
       Přihlásit se
