@@ -17,8 +17,10 @@ const Aboutus = () => {
           PerpartezAI nebude pomáhat jen s matematikou – postupně nabídne podporu ve všech předmětech základní i střední školy. <br></br></p>
       </Row> 
     </Container>
-
-    
+          <h1>Naše začátky</h1>
+          <p>Jsme skupina studentů, kteří sami zápasili s matematikou. <br></br>
+          Chtěli jsme vytvořit alternativní způsob učení, který by opravdu fungoval. Běžná umělá inteligence pro nás nebyla dostatečně efektivní – a tak jsme vyvinuli vlastní, specializovanou na výuku. <br></br>
+          PerpartezAI je výsledek naší snahy o nástroj, který učí lépe než klasické AI, jako je ChatGPT.</p>
     <Container fluid className="footer">
     <Col>
       <Row className="d-inline">
