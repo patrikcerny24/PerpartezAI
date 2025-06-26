@@ -17,11 +17,15 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/home">Domů</Nav.Link>
-            <Nav.Link href="/aboutus">O nás</Nav.Link>
-            <NavDropdown title="Přihlásit se" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/register">Registrovat se</NavDropdown.Item>
-              <NavDropdown.Item href="/login">
+            <Nav.Link href="/home" className="menu">Domů</Nav.Link>
+            <Nav.Link href="/aboutus" className="menu">O nás</Nav.Link>
+            <NavDropdown   title={
+    <span style={{ color: '#038B6B', fontSize: '1.1rem' }}>
+      Přihlásit se
+    </span>
+  }>
+              <NavDropdown.Item href="/register"className="menu">Registrovat se</NavDropdown.Item>
+              <NavDropdown.Item href="/login"className="menu">
                 Přihlásit se
               </NavDropdown.Item>
             </NavDropdown>
