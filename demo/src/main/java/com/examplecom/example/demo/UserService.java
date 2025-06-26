@@ -41,12 +41,13 @@ public class UserService {
     }
 
     public boolean isEmailTaken(String email) {
-        return userRepository.findByEmail(email).isPresent();
+        return userRepository.findByEmail(email) != null;
     }
 
     public boolean isUsernameTaken(String username) {
-        return userRepository.findByUsername(username).isPresent();
+        return userRepository.findByUsername(username) != null;
     }
+
 
     public void registeredUser (User user){
         if (isEmailTaken(user.getEmail()) || isUsernameTaken(user.getUsername())) {
