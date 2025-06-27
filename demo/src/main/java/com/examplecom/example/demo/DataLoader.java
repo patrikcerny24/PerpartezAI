@@ -12,6 +12,7 @@ public class DataLoader {
         return args -> {
            /*repo.save(new User("Alice", "Smith", "alice", "pass1", "alice@example.com", 1986));
             repo.save(new User("Bob",   "Jones", "bobby", "pass2", "bob@example.com",   1979));*/
+            //add testing values here
         };
     }
 }

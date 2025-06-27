@@ -8,7 +8,7 @@ import java.util.List;
 @RequestMapping("/user")
 
 public class UserController{
-    @Autowired
+    @Autowired //not recommended but works
     private UserService userService;
 
     @GetMapping("")
